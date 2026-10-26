@@ -61,6 +61,7 @@ export default function DilutionCalculator() {
 
   const fieldClass =
     "w-full rounded-xl border border-white/15 bg-[#14122a] px-3 py-2.5 text-white outline-none transition focus:border-violet/60 focus:ring-2 focus:ring-violet/30";
+  const selectClass = `${fieldClass} calc-select`;
   const labelClass = "mb-1.5 block text-sm font-medium text-white/80";
 
   const modes: { id: DilutionSolve; label: string }[] = [
@@ -127,7 +128,7 @@ export default function DilutionCalculator() {
                   id={`${formId}-c1u`}
                   value={c1Unit}
                   onChange={(e) => setC1Unit(e.target.value as ConcUnit)}
-                  className={fieldClass}
+                  className={selectClass}
                 >
                   {CONC_UNITS.map((u) => (
                     <option key={u} value={u}>
@@ -163,7 +164,7 @@ export default function DilutionCalculator() {
                   id={`${formId}-v1u`}
                   value={v1Unit}
                   onChange={(e) => setV1Unit(e.target.value as VolumeUnit)}
-                  className={fieldClass}
+                  className={selectClass}
                 >
                   {VOL_UNITS.map((u) => (
                     <option key={u} value={u}>
@@ -199,7 +200,7 @@ export default function DilutionCalculator() {
                   id={`${formId}-c2u`}
                   value={c2Unit}
                   onChange={(e) => setC2Unit(e.target.value as ConcUnit)}
-                  className={fieldClass}
+                  className={selectClass}
                 >
                   {CONC_UNITS.map((u) => (
                     <option key={u} value={u}>
@@ -235,7 +236,7 @@ export default function DilutionCalculator() {
                   id={`${formId}-v2u`}
                   value={v2Unit}
                   onChange={(e) => setV2Unit(e.target.value as VolumeUnit)}
-                  className={fieldClass}
+                  className={selectClass}
                 >
                   {VOL_UNITS.map((u) => (
                     <option key={u} value={u}>

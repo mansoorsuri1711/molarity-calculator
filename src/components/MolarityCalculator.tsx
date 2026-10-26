@@ -79,7 +79,7 @@ export default function MolarityCalculator({ defaultTarget = "mass" }: Props) {
   const fieldClass =
     "w-full rounded-xl border border-white/15 bg-[#14122a] px-3 py-2.5 text-white outline-none transition placeholder:text-white/35 focus:border-violet/60 focus:bg-[#1a1733] focus:ring-2 focus:ring-violet/30";
   const labelClass = "mb-1.5 block text-sm font-medium text-white/80";
-  const selectClass = fieldClass;
+  const selectClass = `${fieldClass} calc-select`;
 
   const modes: { id: SolveTarget; label: string; hint: string }[] = [
     { id: "mass", label: "Mass / grams", hint: "m = M × V × MW" },
